@@ -1,0 +1,4 @@
+# DOTFILES
+```
+./install.sh
+```
