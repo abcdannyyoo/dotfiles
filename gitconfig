@@ -1,0 +1,10 @@
+[user]
+	name = Jaehyung Danny Yoo
+	email = dannyoojh@gmail.com
+[core]
+	excludesfile = /Users/DANNY/.gitignore_global
+	editor = "/usr/local/bin/vim"
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain
