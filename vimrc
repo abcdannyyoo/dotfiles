@@ -75,6 +75,10 @@ let mapleader= " "
 map <C-n> :NERDTreeToggle<CR>
 noremap <leader>z :ZoomWin<cr>
 
+" Bufferline movement for now
+noremap <leader>b :bprevious<cr>
+noremap <leader>n :bnext<cr>
+
 inoremap <A-h> <A-o>h
 inoremap <A-l> <A-o>a
 inoremap <A-j> <A-o>j
