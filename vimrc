@@ -73,6 +73,10 @@ set clipboard=unnamed
 " Set <Leader> key
 let mapleader= " "
 map <C-n> :NERDTreeToggle<CR>
+" Show hidden files such as dotfile
+let NERDTreeShowHidden=1
+
+" Vim window zoom
 noremap <leader>z :ZoomWin<cr>
 
 " Bufferline movement for now
