@@ -3,7 +3,7 @@
 	email = dannyoojh@gmail.com
 [core]
 	excludesfile = /Users/DANNY/.gitignore_global
-	editor = "/usr/local/bin/vim"
+	editor = "/Applications/MacVim.app/Contents/MacOS/Vim"
 [push]
 	default = simple
 [credential]
