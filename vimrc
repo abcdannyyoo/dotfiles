@@ -68,6 +68,8 @@ set smartindent
 set nowrap
 " Synchronise system clipboard with terminal
 set clipboard=unnamed
+" Tell vim where to put swap files
+set dir=~/.vim/tmp/swap_files
 
 " =======================================================================================
 " KEY BINDINGS
