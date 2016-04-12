@@ -14,14 +14,16 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-rails'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'bling/vim-airline'
+Plugin 'edkolev/tmuxline.vim'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'edkolev/tmuxline.vi'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'regedarek/ZoomWin'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'jelera/vim-javascript-syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -34,7 +36,7 @@ filetype plugin indent on
 " Color scheme
 syntax enable
 set background=dark
-let g:seoul256_background = 234
+let g:seoul256_background = 233
 colorscheme seoul256
 
 " Auto trailling whitespace
@@ -63,7 +65,7 @@ set autoindent
 " Smart indent
 set smartindent
 " Wrap lines
-set wrap
+set nowrap
 " Synchronise system clipboard with terminal
 set clipboard=unnamed
 
