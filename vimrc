@@ -74,7 +74,7 @@ set clipboard=unnamed
 " =======================================================================================
 " Set <Leader> key
 let mapleader= " "
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<cr>
 " Show hidden files such as dotfile
 let NERDTreeShowHidden=1
 
@@ -84,6 +84,13 @@ noremap <leader>z :ZoomWin<cr>
 " Bufferline movement for now
 noremap <leader>b :bprevious<cr>
 noremap <leader>n :bnext<cr>
+
+" Save and Quit
+nnoremap <leader>s :update<cr>
+nnoremap <leader>q :quit<cr>
+
+" Refresh vimrc file
+nnoremap <leader>r :source ~/.vimrc<cr>
 
 inoremap <A-h> <A-o>h
 inoremap <A-l> <A-o>a
