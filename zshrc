@@ -58,6 +58,9 @@ export PATH="$PATH:/Users/DANNY/.rvm/gems/ruby-2.1.5/bin:/Users/DANNY/.rvm/gems/
 
 source $ZSH/oh-my-zsh.sh
 
+# No escaping or quoting
+setopt NO_NOMATCH
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
