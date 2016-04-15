@@ -91,4 +91,12 @@ alias vim='mvim -v'
 
 PATH=$HOME/.node/bin:$PATH
 PATH=/usr/local/share/npm/bin:$PATH
-export BIZ_COLLECTION_API='http://api.halfback.dev'
+
+# Load env vars
+if [ -f ~/.env_variables ]; then
+    source ~/.env_variables
+else
+    print ".env_variables Not Found"
+fi
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
