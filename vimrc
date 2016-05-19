@@ -24,6 +24,7 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'regedarek/ZoomWin'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -70,6 +71,15 @@ set nowrap
 set clipboard=unnamed
 " Tell vim where to put swap files
 set dir=~/.vim/tmp/swap_files
+
+" =======================================================================================
+" React Settings
+" =======================================================================================
+" Allow JSX in normal JS files
+let g:jsx_ext_required = 0
+let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
+
 
 " =======================================================================================
 " KEY BINDINGS
