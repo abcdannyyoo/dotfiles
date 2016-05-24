@@ -9,6 +9,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'alvan/vim-closetag'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-projectionist'
@@ -23,6 +24,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'regedarek/ZoomWin'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'mxw/vim-jsx'
 
@@ -140,3 +142,6 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 1
 let g:airline_theme='wombat'
+
+" Closetag
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*hbs"
