@@ -87,7 +87,8 @@ setopt NO_NOMATCH
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim"
-alias vim='mvim -v'
+alias vim="mvim -v"
+alias ember="./node_modules/.bin/ember"
 
 PATH=$HOME/.node/bin:$PATH
 PATH=/usr/local/share/npm/bin:$PATH
@@ -99,4 +100,7 @@ else
     print ".env_variables Not Found"
 fi
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin"
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
