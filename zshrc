@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/DANNY/.oh-my-zsh
+export ZSH=/Users/dannyyoo/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -53,7 +53,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="$PATH:/Users/DANNY/.rvm/gems/ruby-2.1.5/bin:/Users/DANNY/.rvm/gems/ruby-2.1.5@global/bin:/Users/DANNY/.rvm/rubies/ruby-2.1.5/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/DANNY/.rvm/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -99,8 +99,3 @@ if [ -f ~/.env_variables ]; then
 else
     print ".env_variables Not Found"
 fi
-
-# Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.rvm/bin"
-export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
