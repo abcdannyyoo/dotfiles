@@ -53,8 +53,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH="/usr/local/bin:/usr/bin:/bin"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,9 +88,6 @@ setopt NO_NOMATCH
 alias vim="/usr/local/bin/mvim -v"
 alias ember="./node_modules/.bin/ember"
 
-PATH=$HOME/.node/bin:$PATH
-PATH=/usr/local/share/npm/bin:$PATH
-
 # Load env variables file
 if [ -f ~/.env_variables ]; then
     source ~/.env_variables
@@ -102,3 +98,6 @@ fi
 # NVM
 export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
+
+# rbenv
+eval "$(rbenv init -)"
