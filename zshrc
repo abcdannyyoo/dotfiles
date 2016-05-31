@@ -86,16 +86,19 @@ setopt NO_NOMATCH
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim"
-alias vim="mvim -v"
+alias vim="/usr/local/bin/mvim -v"
 alias ember="./node_modules/.bin/ember"
 
 PATH=$HOME/.node/bin:$PATH
 PATH=/usr/local/share/npm/bin:$PATH
 
-# Load env vars
+# Load env variables file
 if [ -f ~/.env_variables ]; then
     source ~/.env_variables
 else
     print ".env_variables Not Found"
 fi
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
