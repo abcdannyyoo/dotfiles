@@ -16,6 +16,7 @@ Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-ragtag'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'bling/vim-airline'
@@ -28,6 +29,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'mattn/emmet-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -42,6 +44,11 @@ syntax enable
 set background=dark
 let g:seoul256_background = 233
 colorscheme seoul256
+
+" Highlight current cursor row
+set cursorline
+autocmd InsertEnter * highlight CursorLine guibg=#000050 guifg=fg
+autocmd InsertLeave * highlight CursorLine guibg=#004000 guifg=fg
 
 " Auto trailling whitespace
 autocmd BufWritePre * :%s/\s\+$//e
