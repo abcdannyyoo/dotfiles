@@ -152,4 +152,4 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='wombat'
 
 " Closetag
-let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*hbs"
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*hbs,*.html.erb"
