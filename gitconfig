@@ -1,6 +1,6 @@
 [user]
-	name = Jaehyung Danny Yoo
-	email = dannyoojh@gmail.com
+	name = Danny Yoo
+	email = danny@isgeeking.com
 [core]
 	excludesfile = /Users/DANNY/.gitignore_global
 	editor = "/Applications/MacVim.app/Contents/MacOS/Vim"
