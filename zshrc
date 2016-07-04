@@ -84,7 +84,7 @@ setopt NO_NOMATCH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
+
 alias vim="/usr/local/bin/mvim -v"
 alias ember="./node_modules/.bin/ember"
 
@@ -94,6 +94,9 @@ if [ -f ~/.env_variables ]; then
 else
     print ".env_variables Not Found"
 fi
+
+# Set default editor as Vim
+export EDITOR=vim
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
