@@ -96,7 +96,10 @@ let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
 " =======================================================================================
 " Set <Leader> key
 let mapleader= " "
+
+" Open NERDTree
 map <C-n> :NERDTreeToggle<cr>
+
 " Show hidden files such as dotfile
 let NERDTreeShowHidden=1
 
@@ -126,6 +129,17 @@ nnoremap <silent> <Esc>j :TmuxNavigateDown<cr>
 nnoremap <silent> <Esc>k :TmuxNavigateUp<cr>
 nnoremap <silent> <Esc>l :TmuxNavigateRight<cr>
 nnoremap <silent> <Esc>\ :TmuxNavigatePrevious<cr>
+
+" resize windows
+nnoremap <silent> <Leader>= :exe "resize +3"<CR>
+nnoremap <silent> <Leader>- :exe "resize -3"<CR>
+nnoremap <silent> <Leader>] :exe "vertical resize +8"<CR>
+nnoremap <silent> <Leader>[ :exe "vertical resize -8"<CR>
+
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>_ :exe "resize " . (winheight(0) * 2/3)<CR>
+nnoremap <silent> <Leader>} :exe "vertical resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>{ :exe "vertical resize " . (winheight(0) * 2/3)<CR>
 
 " NERDTree unicode based on the status of git
 let g:NERDTreeDirArrows = 1
