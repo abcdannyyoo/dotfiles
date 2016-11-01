@@ -39,6 +39,9 @@ call vundle#end()
 " =======================================================================================
 filetype plugin indent on
 
+" Fix slow cursor scrolling
+set lazyredraw
+
 " Color scheme
 syntax enable
 set background=dark
@@ -46,7 +49,7 @@ let g:seoul256_background = 233
 colorscheme seoul256
 
 " Highlight current cursor row
-set cursorline
+set cursorline!
 autocmd InsertEnter * highlight CursorLine guibg=#000050 guifg=fg
 autocmd InsertLeave * highlight CursorLine guibg=#004000 guifg=fg
 
