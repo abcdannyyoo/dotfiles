@@ -1,43 +1,38 @@
 " =======================================================================================
-" PLUGINS
+" VIM-PLUG
 " =======================================================================================
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'alvan/vim-closetag'
+Plug 'junegunn/seoul256.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-ragtag'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'bling/vim-airline'
+Plug 'edkolev/tmuxline.vim'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'regedarek/ZoomWin'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'pangloss/vim-javascript'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'mxw/vim-jsx'
+Plug 'tpope/vim-unimpaired'
+Plug 'mattn/emmet-vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'alvan/vim-closetag'
-Plugin 'junegunn/seoul256.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-projectionist'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-ragtag'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'bling/vim-airline'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'regedarek/ZoomWin'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'pangloss/vim-javascript'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'mxw/vim-jsx'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'mattn/emmet-vim'
-
-" All of your Plugins must be added before the following line
-call vundle#end()
+call plug#end()
 
 " =======================================================================================
 " GENERAL
 " =======================================================================================
-filetype plugin indent on
 
 " Fix slow cursor scrolling
 set lazyredraw
@@ -86,13 +81,26 @@ set clipboard=unnamed
 set dir=~/.vim/tmp/swap_files
 
 " =======================================================================================
-" React Settings
+" REACT SETTINGS
 " =======================================================================================
 " Allow JSX in normal JS files
 let g:jsx_ext_required = 0
 let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
 
+" =======================================================================================
+" FZF
+" =======================================================================================
+let g:fzf_action = {
+\  'ctrl-t': 'tab split',
+\  'ctrl-s': 'split',
+\  'ctrl-v': 'vsplit'
+\ }
+let g:fzf_history_dir = '~/.fzf-history'
+
+nnoremap <silent> <Leader>o :Files<CR>
+nnoremap <silent> <Leader>a :Ag<CR>
+nnoremap <silent> <Leader><Enter> :Buffers<CR>
 
 " =======================================================================================
 " KEY BINDINGS
