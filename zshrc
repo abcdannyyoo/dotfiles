@@ -104,3 +104,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # rbenv
 eval "$(rbenv init -)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
