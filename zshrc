@@ -85,7 +85,8 @@ setopt NO_NOMATCH
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias vim="/usr/local/bin/mvim -v"
+# alias vim="/usr/local/bin/mvim -v"
+alias vim="/usr/local/bin/nvim"
 alias ember="./node_modules/.bin/ember"
 
 # Load env variables file
@@ -99,8 +100,12 @@ fi
 export EDITOR=vim
 
 # NVM
+# export NVM_DIR="$HOME/.nvm"
+# . "$(brew --prefix nvm)/nvm.sh"
+
+# New recommanded configuration for 0.33.0 version of NVM
 export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
+. "/usr/local/opt/nvm/nvm.sh"
 
 # rbenv
 eval "$(rbenv init -)"
