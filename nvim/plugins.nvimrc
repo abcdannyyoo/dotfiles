@@ -22,6 +22,8 @@ let g:fzf_history_dir = '~/.fzf-history'
 " NETDTREE
 " =======================================================================================
 
+let NERDTreeIgnore = ['.DS_Store']
+
 " NERDTree unicode based on the status of git
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
