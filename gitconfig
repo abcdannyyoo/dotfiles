@@ -3,7 +3,7 @@
 	email = danny@isgeeking.com
 [core]
 	excludesfile = /Users/DANNY/.gitignore_global
-	editor = vim
+	editor = /usr/local/bin/nvim
 [push]
 	default = simple
 [credential]
