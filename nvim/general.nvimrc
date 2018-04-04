@@ -6,15 +6,32 @@
 set lazyredraw
 
 " Color scheme
+
+" True color support
+if (has("nvim"))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+" Snippet for Vim inside Tmux
+set t_8b=^[[48;2;%lu;%lu;%lum
+set t_8f=^[[38;2;%lu;%lu;%lum
+
 syntax enable
+colorscheme one
 set background=dark
-let g:seoul256_background = 233
-colorscheme seoul256
+" highlight Normal guibg=#1d2026
+
+" let g:seoul256_background = 233
+" colorscheme seoul256
 
 " Highlight current cursor row
-set cursorline!
-autocmd InsertEnter * highlight CursorLine guibg=#000050 guifg=fg
-autocmd InsertLeave * highlight CursorLine guibg=#004000 guifg=fg
+" set cursorline!
+" autocmd InsertEnter * highlight CursorLine guibg=#000050 guifg=fg
+" autocmd InsertLeave * highlight CursorLine guibg=#004000 guifg=fg
 
 " Auto trailling whitespace
 autocmd BufWritePre * :%s/\s\+$//e
