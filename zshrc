@@ -88,6 +88,7 @@ setopt NO_NOMATCH
 # alias vim="/usr/local/bin/mvim -v"
 alias vim="/usr/local/bin/nvim"
 alias ember="./node_modules/.bin/ember"
+alias tmux="env TERM=xterm-256color tmux"
 
 # Load env variables file
 if [ -f ~/.env_variables ]; then
