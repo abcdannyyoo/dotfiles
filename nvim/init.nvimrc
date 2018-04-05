@@ -15,9 +15,9 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-ragtag'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'bling/vim-airline'
+" Plug 'bling/vim-airline'
 Plug 'edkolev/tmuxline.vim'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline-themes'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'regedarek/ZoomWin'
 Plug 'christoomey/vim-tmux-navigator'
@@ -29,5 +29,6 @@ Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'rakr/vim-one'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
