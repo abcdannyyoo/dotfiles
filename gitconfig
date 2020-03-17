@@ -1,6 +1,6 @@
 [user]
 	name = Danny Yoo
-	email = danny@isgeeking.com
+	email = danny@yooyeon.com
 [core]
 	excludesfile = /Users/DANNY/.gitignore_global
 	editor = /usr/local/bin/nvim
