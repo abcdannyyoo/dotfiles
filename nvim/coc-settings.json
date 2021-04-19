@@ -12,6 +12,8 @@
   /* ] */
 
   "snippets.ultisnips.directories": [
-    "~/.config/nvim/nsips"
-  ]
+    "~/.config/nvim/snips"
+  ],
+
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips"
 }
