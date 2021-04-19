@@ -1,12 +1,18 @@
-source $HOME/.config/nvim/vim-plug/plugins.vim
+" General
 source $HOME/.config/nvim/general/settings.vim
-source $HOME/.config/nvim/keys/mappings.vim
 
-" Theme Configuration
+" List of plugins
+source $HOME/.config/nvim/vim-plug/plugins.vim
+
+" Key-bindings
+source $HOME/.config/nvim/keys/mappings.vim
+source $HOME/.config/nvim/keys/which-key.vim
+
+" Theme
 source $HOME/.config/nvim/themes/gruvbox.vim
 " source $HOME/.config/nvim/themes/onedark.vim
 
-" Plug Configuration
+" Plugin configurations
 source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/nerdtree.vim
 source $HOME/.config/nvim/plug-config/zoomwin.vim

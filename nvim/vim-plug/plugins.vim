@@ -36,6 +36,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+    " Display key bindings in popup
+    Plug 'liuchengxu/vim-which-key'
+
 call plug#end()
 
 " Automatically install missing plugins on startup
