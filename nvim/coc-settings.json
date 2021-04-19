@@ -5,9 +5,13 @@
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
 
-  "snippets.ultisnips.directories":
-  [
-    "UltiSnips",
-    "~/.config/nvim/utils/snips"
+  /* "snippets.ultisnips.directories": */
+  /* [ */
+  /*   "UltiSnips", */
+  /*   "~/.config/nvim/utils/snips" */
+  /* ] */
+
+  "snippets.ultisnips.directories": [
+    "~/.config/nvim/nsips"
   ]
 }
