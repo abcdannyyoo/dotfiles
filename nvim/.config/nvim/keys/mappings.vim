@@ -44,9 +44,6 @@ map <leader>l :wincmd l<CR>
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
 
-" Open NERDTree
-map <C-n> :NERDTreeToggle<cr>
-
 " Refresh vimrc file
 " nnoremap <leader>r :source ~/.config/nvim/init.vim<cr>
 

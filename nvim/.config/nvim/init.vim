@@ -15,7 +15,6 @@ source $HOME/.config/nvim/themes/gruvbox.vim
 " Plugin configurations
 source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/tmuxline.vim
-source $HOME/.config/nvim/plug-config/nerdtree.vim
 source $HOME/.config/nvim/plug-config/zoomwin.vim
 source $HOME/.config/nvim/plug-config/closetag.vim
 source $HOME/.config/nvim/plug-config/coc.vim
