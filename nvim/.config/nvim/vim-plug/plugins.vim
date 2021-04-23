@@ -39,6 +39,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Display key bindings in popup
     Plug 'liuchengxu/vim-which-key'
 
+    " Tmux
+    Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end()
 
 " Automatically install missing plugins on startup
