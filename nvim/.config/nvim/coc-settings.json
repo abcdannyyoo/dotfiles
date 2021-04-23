@@ -22,7 +22,7 @@
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
   "explorer.keyMappings.global": {
-    "<cr>": ["expandable?", "expand", "open"],
+    "o": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
   },
   "explorer.file.showHiddenFiles": true

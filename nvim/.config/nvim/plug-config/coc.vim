@@ -164,7 +164,7 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " Explorer mappings
-nmap <space>e :CocCommand explorer<CR>
+nmap <C-n> :CocCommand explorer<CR>
 " Automatically close vim when a last file is closed
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
