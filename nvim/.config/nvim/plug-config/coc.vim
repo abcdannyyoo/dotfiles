@@ -166,7 +166,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " Explorer mappings
 nmap <C-n> :CocCommand explorer<CR>
 " Automatically close vim when a last file is closed
-autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+" autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 " Automatically install the listed coc extensions if they are not installed
 let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-json', 'coc-pairs', 'coc-python', 'coc-snippets', 'coc-tsserver', 'coc-vimlsp', 'coc-explorer', 'coc-prettier']
