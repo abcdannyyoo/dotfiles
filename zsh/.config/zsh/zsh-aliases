@@ -1,0 +1,5 @@
+alias vim="/usr/local/bin/nvim"
+alias ember="./node_modules/.bin/ember"
+alias tmux="env TERM=xterm-256color tmux"
+alias lvim="$HOME/.local/bin/lvim"
+alias lg="lazygit"
