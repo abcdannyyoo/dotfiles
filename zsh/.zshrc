@@ -1,12 +1,13 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/danny/.oh-my-zsh
+# export ZSH=/Users/danny/.oh-my-zsh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -61,6 +62,7 @@ plugins=(git)
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:${PATH}"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -96,6 +98,8 @@ setopt NO_NOMATCH
 alias vim="/usr/local/bin/nvim"
 alias ember="./node_modules/.bin/ember"
 alias tmux="env TERM=xterm-256color tmux"
+alias lvim="$HOME/.local/bin/lvim"
+alias lg="lazygit"
 
 # Load env variables file
 if [ -f ~/.env_variables ]; then
@@ -134,3 +138,6 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# ZSH Autosuggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
