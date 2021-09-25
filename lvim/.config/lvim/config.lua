@@ -17,6 +17,12 @@ lvim.colorscheme = "onedarker"
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.lsp.diagnostics.virtual_text = false
+
+-- Whichkey
+lvim.builtin.which_key.mappings.l.d = { "<cmd>TroubleToggle<cr>", "Diagnostics" }
+lvim.builtin.which_key.mappings.l.R = { "<cmd>TroubleToggle lsp_references<cr>", "References" }
+
 -- unmap a default keymapping
 -- lvim.keys.normal_mode["<C-Up>"] = ""
 -- edit a default keymapping
@@ -98,23 +104,16 @@ lvim.builtin.treesitter.highlight.enabled = true
 --     exe = "flake8",
 --   }
 -- }
-
-lvim.lang.typescriptreact.formatters = {
-  {
-    exe = "prettier"
-  }
-}
-
-lvim.lang.typescript.formatters = {
-  {
-    exe = "prettier"
-  }
-}
-
+lvim.lang.typescript.formatters = { { exe = "prettier" } }
+lvim.lang.typescriptreact.formatters = lvim.lang.typescript.formatters
 
 -- Additional Plugins
 lvim.plugins = {
-  {"apzelos/blamer.nvim"}
+  {"apzelos/blamer.nvim"},
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  }
     -- {"folke/tokyonight.nvim"},
     -- {
     --   "folke/trouble.nvim",

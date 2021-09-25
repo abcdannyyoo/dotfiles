@@ -2,9 +2,6 @@
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="/usr/local/bin:${PATH}"
 
-# Set default editor as Vim
-export EDITOR=vim
-#
 # NVM
 # export NVM_DIR="$HOME/.nvm"
 # . "$(brew --prefix nvm)/nvm.sh"

@@ -9,19 +9,20 @@ export ZDOTDIR=$HOME/.config/zsh
 
 # Path to your oh-my-zsh installation.
 # export ZSH=/Users/danny/.oh-my-zsh
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+# source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Useful functions
 source "$ZDOTDIR/zsh-functions"
 
 zsh_add_file "zsh-exports"
 zsh_add_file "zsh-aliases"
+zsh_add_file "zsh-prompt"
 
 plugins=(git)
 
@@ -44,5 +45,6 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# ZSH Autosuggestions
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Default environment variables
+export EDITOR="vim"
+export TERMINAL="alacritty"
