@@ -46,5 +46,5 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Default environment variables
-export EDITOR="vim"
-export TERMINAL="alacritty"
+export EDITOR="nvim"
+export TERMINAL="iterm2"
