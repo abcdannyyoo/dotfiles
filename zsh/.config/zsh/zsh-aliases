@@ -2,3 +2,12 @@ alias vim="/usr/local/bin/nvim"
 alias tmux="env TERM=xterm-256color tmux"
 alias lvim="$HOME/.local/bin/lvim"
 alias lg="lazygit"
+alias python="python3"
+alias tf="terraform"
+
+# Git
+alias gp="git push"
+alias gl="git pull"
+alias grb="git rebase"
+alias gm="git merge --no-ff"
+alias gs='(){ echo git rebase -i HEAD~$1. ;}'
