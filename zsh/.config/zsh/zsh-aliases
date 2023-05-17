@@ -10,4 +10,8 @@ alias gp="git push"
 alias gl="git pull"
 alias grb="git rebase"
 alias gm="git merge --no-ff"
-alias gs='(){ echo git rebase -i HEAD~$1. ;}'
+
+function gs() {
+  git rebase -i HEAD~$1
+}
+alias gs='gs'
