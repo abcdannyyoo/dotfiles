@@ -48,3 +48,4 @@ fi
 # Default environment variables
 export EDITOR="nvim"
 export TERMINAL="iterm2"
+export NVM_DIR=~/.nvm
