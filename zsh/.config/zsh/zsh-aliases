@@ -15,3 +15,5 @@ function gs() {
   git rebase -i HEAD~$1
 }
 alias gs='gs'
+alias gst='git stash --include-untracked'
+alias gstp='git stash pop'
