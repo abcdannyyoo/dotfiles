@@ -26,7 +26,7 @@ zsh_add_file "zsh-prompt"
 
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # No escaping or quoting
 setopt NO_NOMATCH
