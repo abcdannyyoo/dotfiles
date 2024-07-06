@@ -1,12 +1,12 @@
 [user]
 	name = Danny Yoo
-	email = hello@homebody.dev
+	email = abcdannyyoo@gmail.com
 [core]
 	excludesfile = /Users/DANNY/.gitignore_global
 	editor = /usr/local/bin/nvim
 [push]
 	default = simple
 [credential]
-	helper = store
+	helper = osxkeychain
 [init]
 	defaultBranch = main
