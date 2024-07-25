@@ -8,7 +8,7 @@ alias tf="terraform"
 # Git
 alias gp="git push"
 alias gl="git pull"
-alias grb="git rebase"
+alias grbm="git rebase master"
 alias gm="git merge --no-ff"
 
 function gs() {
@@ -17,3 +17,4 @@ function gs() {
 alias gs='gs'
 alias gst='git stash --include-untracked'
 alias gstp='git stash pop'
+alias y='yarn'
