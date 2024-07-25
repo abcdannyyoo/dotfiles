@@ -19,6 +19,7 @@ export ZDOTDIR=$HOME/.config/zsh
 
 # Useful functions
 source "$ZDOTDIR/zsh-functions"
+source "$ZDOTDIR/azure-devops-script"
 
 zsh_add_file "zsh-exports"
 zsh_add_file "zsh-aliases"

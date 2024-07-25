@@ -1,0 +1,48 @@
+#!/bin/zsh
+
+# Create a pull request to Azure DevOps
+function pr() {
+    # Prompt for Login if needed
+    if ! az account show &> /dev/null; then
+        az login --output none
+    fi
+
+    # Assign title if provided as argument
+    local TITLE="$1"
+    # Calculate the last commit message to use in the PR title
+    local LAST_COMMIT_MESSAGE=$(git log --pretty=format:"%s" -n 1)
+    # Extract the work item id from branch name
+    local WORK_ITEM_ID=$(git branch --show-current | tr -cd '0-9')
+    # Destructure remote url
+    local REMOTE_URL=$(git config --get remote.origin.url)
+    local REMOTE_URL_PARTS=($(echo $REMOTE_URL | tr '/' '\n'))
+
+    local PROJECT_NAME=${REMOTE_URL_PARTS[3]}
+    local REPO_NAME=${REMOTE_URL_PARTS[4]}
+
+    echo $PROJECT_NAME
+    echo $REPO_NAME
+
+    # Prompt for TITLE if not provided
+    if [[ -z "$TITLE" ]]; then
+        read "userTitle?Enter title or skip to default to '$LAST_COMMIT_MESSAGE': "
+        if [[ -n "$userTitle" ]]; then
+            TITLE="$userTitle"
+        else
+            TITLE="$LAST_COMMIT_MESSAGE"
+        fi
+    fi
+
+    # Create PR
+    echo "🚀 Creating a pull request..."
+
+    local RESULT=$(az repos pr create \
+        --title "$TITLE" \
+        --description "Related work item: #$WORK_ITEM_ID" \
+        --draft "true" \
+        --output "json" | jq -r .)
+
+    local PULL_REQUEST_ID=$(echo "$RESULT" | jq -r '.pullRequestId')
+
+    echo "✅ https://dev.azure.com/nzte/$PROJECT_NAME/_git/$REPO_NAME/pullrequest/$PULL_REQUEST_ID"
+}
