@@ -16,12 +16,8 @@ function pr() {
     # Destructure remote url
     local REMOTE_URL=$(git config --get remote.origin.url)
     local REMOTE_URL_PARTS=($(echo $REMOTE_URL | tr '/' '\n'))
-
     local PROJECT_NAME=${REMOTE_URL_PARTS[3]}
     local REPO_NAME=${REMOTE_URL_PARTS[4]}
-
-    echo $PROJECT_NAME
-    echo $REPO_NAME
 
     # Prompt for TITLE if not provided
     if [[ -z "$TITLE" ]]; then
@@ -36,13 +32,20 @@ function pr() {
     # Create PR
     echo "🚀 Creating a pull request..."
 
+    # FIX: Linking work item does not work
     local RESULT=$(az repos pr create \
         --title "$TITLE" \
         --description "Related work item: #$WORK_ITEM_ID" \
         --draft "true" \
+        --work-items "$WORK_ITEM_ID" \
         --output "json" | jq -r .)
 
     local PULL_REQUEST_ID=$(echo "$RESULT" | jq -r '.pullRequestId')
 
-    echo "✅ https://dev.azure.com/nzte/$PROJECT_NAME/_git/$REPO_NAME/pullrequest/$PULL_REQUEST_ID"
+    if [[ -z "$PULL_REQUEST_ID" ]]; then
+        echo "💀 Failed to create a pull request"
+        return 1
+    else
+        echo "✅ https://dev.azure.com/nzte/$PROJECT_NAME/_git/$REPO_NAME/pullrequest/$PULL_REQUEST_ID"
+    fi
 }
