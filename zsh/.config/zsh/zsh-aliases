@@ -5,6 +5,8 @@ alias lg="lazygit"
 alias python="python3"
 alias tf="terraform"
 
+alias sourcezshrc="source ~/.config/zsh/.zshrc"
+
 # Git
 alias gp="git push"
 alias gl="git pull"
