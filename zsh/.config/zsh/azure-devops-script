@@ -32,7 +32,7 @@ function pr() {
     # Create PR
     echo "🚀 Creating a pull request..."
 
-    # FIX: Linking work item does not work
+    # --work-items does not work for some reason
     local RESULT=$(az repos pr create \
         --title "$TITLE" \
         --description "Related work item: #$WORK_ITEM_ID" \
@@ -46,6 +46,7 @@ function pr() {
         echo "💀 Failed to create a pull request"
         return 1
     else
+        az repos pr work-item add --id $PULL_REQUEST_ID --work-item-id $WORK_ITEM_ID
         echo "✅ https://dev.azure.com/nzte/$PROJECT_NAME/_git/$REPO_NAME/pullrequest/$PULL_REQUEST_ID"
     fi
 }
