@@ -20,3 +20,8 @@ alias gs='gs'
 alias gst='git stash --include-untracked'
 alias gstp='git stash pop'
 alias y='yarn'
+
+# PNPM
+alias pn='pnpm'
+alias pnsb='pnpm storybook'
+alias pni='pnpm install'
