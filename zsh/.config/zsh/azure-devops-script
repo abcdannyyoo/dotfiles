@@ -47,6 +47,7 @@ function pr() {
         return 1
     else
         az repos pr work-item add --id $PULL_REQUEST_ID --work-item-id $WORK_ITEM_ID
-        echo "✅ https://dev.azure.com/nzte/$PROJECT_NAME/_git/$REPO_NAME/pullrequest/$PULL_REQUEST_ID"
+        echo "✅ Successfully created PR:"
+        echo "https://dev.azure.com/nzte/$PROJECT_NAME/_git/$REPO_NAME/pullrequest/$PULL_REQUEST_ID"
     fi
 }
