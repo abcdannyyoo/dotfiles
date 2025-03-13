@@ -7,4 +7,6 @@ local config = wezterm.config_builder()
 config.font = wezterm.font("MesLoLGS Nerd Font Mono")
 config.font_size = 19
 
+config.enable_tab_bar = false
+
 return config
