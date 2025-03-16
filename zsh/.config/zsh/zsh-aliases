@@ -27,4 +27,4 @@ alias pnsb='pnpm storybook'
 alias pni='pnpm install'
 
 # TODO: make it as a function
-alias brewbundle='brew bundle dump --file=~/dotfiles/Brewfile'
+alias brewbundle='brew bundle dump --force --file=~/dotfiles/Brewfile'
