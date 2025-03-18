@@ -28,3 +28,6 @@ alias pni='pnpm install'
 
 # TODO: make it as a function
 alias brewbundle='brew bundle dump --force --file=~/dotfiles/Brewfile'
+
+# Eza
+alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
