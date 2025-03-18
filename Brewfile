@@ -1,4 +1,8 @@
 tap "homebrew/bundle"
+brew "bat"
+brew "eza"
+brew "fd"
+brew "fzf"
 brew "lazygit"
 brew "neovim"
 brew "nvm"
