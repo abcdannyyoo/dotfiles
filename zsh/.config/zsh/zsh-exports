@@ -22,3 +22,6 @@ export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+
+# Config directory
+export XDG_CONFIG_HOME="$HOME/.config"
